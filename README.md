@@ -1,2 +1,7 @@
-# OCTOFISH-CHECKPOINT
-Pengumpulan mid-check point capstone project.
+COMPANY CAPSTONE PROJECT - C23-OS03
+Fishku App Optimization for Seller
+Mid Checkpoint Report
+
+
+
+
