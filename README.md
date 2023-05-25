@@ -9,7 +9,7 @@ Progress:
 
 Additional note: Several dataset that we used are belong to Fishku's Company so we can't attach the data in this repository due to NDA
 
-Supporting Evidence:
+Supporting Evidence :
 - Fish freshness prediction by temperature and storage time
 ![temp_fresh](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/41560084/412570a8-c586-4019-94d2-b3cbcdbb91c3)
 
