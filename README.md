@@ -10,18 +10,20 @@ Progress:
 Additional note: Several dataset that we used are belong to Fishku's Company so we can't attach the data in this repository due to NDA
 
 Supporting Evidence :
-- Fish freshness prediction by temperature and storage time
+
+- Fish freshness prediction by temperature and storage time : 
+
 ![temp_fresh](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/41560084/412570a8-c586-4019-94d2-b3cbcdbb91c3)
 
-- Validation and loss for fish freshness (eyes)
+- Validation and loss for fish freshness (eyes) : 
 
 ![image3](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/41560084/84407a2c-2291-4426-a6fe-9d9b21dcb5a8)
 
-- Validation and loss for fish freshness (gills)
+- Validation and loss for fish freshness (gills) : 
 
 ![image5](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/41560084/5bcae476-9242-47df-98dd-27c763461905)
 
-- Fish freshness prediction by image (eyes)
+- Fish freshness prediction by image (eyes) : 
 
 ![image4](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/41560084/1bf23062-6383-4c7c-ab29-75091e3b7bbe)
 
