@@ -7,7 +7,8 @@ Progress:
 4. Improving model by changing outlier of the data and try other model infrastucture and so on.
 
 
-Additional note: Several dataset that we used are belong to Fishku's Company so we can't attach the data in this repository due to NDA
+Additional note : 
+Several dataset that we used are belong to Fishku's Company so we can't attach the data in this repository due to NDA
 
 Supporting Evidence :
 
