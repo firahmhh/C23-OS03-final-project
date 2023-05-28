@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Mukta:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mukta", sans-serif;
+}
+
+/* side menu */
+.sidebar {
+  background: white;
+  padding: 20px 0 60px 0;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  float: left;
+  border-right: 0.8px solid #eee;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+.sidebar.close {
+  margin-left: -300px;
+}
+
+.sidebar .nav-link {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 20px;
+  height: 100%;
+  color: #1d1c1a;
+  overflow: auto;
+}
+
+.sidebar .nav-link::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar .nav-link li {
+  list-style: none;
+  padding: 3px 0;
+  margin-bottom: 5px;
+}
+
+.sidebar .nav-link li a {
+  color: #1d1c1a;
+  opacity: 0.95;
+  text-decoration: none;
+}
+
+.sidebar .nav-link .sub-endpoint {
+  margin-left: 20px;
+}
+
+.sidebar .nav-link li:hover {
+  border-right: 0.8px solid #5d9aef;
+  text-decoration: underline;
+}
+
+.sidebar .nav-link li.active {
+  font-weight: 700;
+  border-right: 0.8px solid #5d9aef;
+}
+
+.sidebar .nav-link li.active a {
+  color: #5d9aef;
+}
+
+/* burger */
+.colaps {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin: 10px;
+  z-index: 9;
+  height: 40px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.colaps i {
+  font-size: 20px;
+  color: #1d1c1a44;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.colaps i:hover {
+  color: #1d1c1a;
+}
+
+/* content */
+.content {
+  position: relative;
+  left: 300px;
+  width: calc(100% - 300px);
+  padding: 30px 30px 50px 100px;
+  transition: all 0.5s ease;
+  overflow-x: hidden;
+}
+
+.sidebar.close ~ .content {
+  left: 0;
+  width: 100%;
+  overflow-x: none;
+}
+
+.content h1,
+.content h2,
+.content h3 {
+  color: #1d1c1ace;
+}
+
+.content h1 {
+  font-family: "Arvo", serif;
+  font-size: 28px;
+  font-weight: 700;
+  width: 700px;
+}
+
+.content h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.content p a {
+  font-weight: 600;
+  color: #5d9aef;
+}
+
+.content .endpoint ul {
+  padding-left: 20px;
+  width: 700px;
+}
+
+.content .endpoint ul li {
+  margin-bottom: 5px;
+  font-weight: 300;
+  word-spacing: 5px;
+  color: #1d1c1ace;
+}
+
+.content code {
+  padding: 0 10px;
+  background: rgb(249, 249, 249);
+  border-radius: 8px;
+  color: #5d7fef;
+  font-weight: 500;
+}
+
+.content .endpoint ul li.response {
+  list-style: none;
+}
+
+.content .endpoint ul li img {
+  width: 100%;
+}
+
+.footer {
+  pointer-events: none;
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+  margin: 0 20px 10px 0;
+  opacity: 0.3;
+  line-height: 15px;
+}
+
+.footer i {
+  float: right;
+  font-size: 30px;
+}
+
+.footer h4 {
+  font-size: 14px;
+  float: left;
+}
+
+/* 850px */
+@media screen and (max-width: 850px) {
+  .sidebar {
+    width: 250px;
+  }
+
+  .content {
+    left: 250px;
+    width: calc(100% - 250px);
+    padding: 30px 50px;
+  }
+
+  .content .endpoint ul li img {
+    width: 80%;
+  }
+}
+
+/*  */
+
+/* 450px */
+@media screen and (max-width: 450px) {
+  /* sidebar */
+  .sidebar {
+    width: 150px;
+    padding: 10px 0 50px 0;
+  }
+
+  .sidebar .nav-link {
+    font-size: 10px;
+    margin-left: 15px;
+  }
+
+  .sidebar .nav-link li {
+    padding: 2px 0;
+    margin-bottom: 2px;
+  }
+
+  /* colaps */
+  .colaps {
+    margin: 2px;
+    height: 20px;
+    width: 25px;
+  }
+  .colaps i {
+    font-size: 14px;
+  }
+
+  /* content */
+  .content {
+    left: 150px;
+    width: calc(100% - 150px);
+    padding: 20px 30px;
+  }
+
+  .sidebar.close ~ .content {
+    padding: 20px 15px;
+  }
+
+  .content h1 {
+    font-size: 20px;
+    width: 250px;
+  }
+
+  .content h3 {
+    width: 250px;
+    font-size: 18px;
+    margin: 10px 0 0 0;
+  }
+
+  .content p a {
+    font-size: 14px;
+  }
+
+  .content .endpoint ul {
+    width: 250px;
+  }
+
+  .content .endpoint ul li {
+    font-size: 14px;
+  }
+
+  .content .endpoint ul li img {
+    margin-left: -20px;
+    width: 125%;
+  }
+
+  .footer {
+    margin: 5px;
+  }
+
+  .footer i {
+    display: none;
+  }
+
+  .footer h4 {
+    font-size: 10px;
+  }
+
+  .footer p {
+    float: right;
+    font-size: 8px;
+    margin-left: 2px;
+  }
+}

@@ -1,0 +1,21 @@
+steps:
+
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'asia-southeast2-docker.pkg.dev/$PROJECT_ID/fishku-dev/nodejs-dev:1', '.']
+# Authentication Artifact Registry
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: ['auth', 'configure-docker','asia-southeast2-docker.pkg.dev']
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'asia-southeast2-docker.pkg.dev/$PROJECT_ID/fishku-dev/nodejs-dev:1']
+# Deploy container image to Cloud Run
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: ['run', 'deploy', 'nodejs-dev', '--image', 'asia-southeast2-docker.pkg.dev/$PROJECT_ID/fishku-dev/nodejs-dev:1', '--region', 'asia-southeast2', '--update-secrets', 'DB=database:latest', '--update-secrets', 'USER=username:latest', '--update-secrets', 'PW=password-db:latest', '--add-cloudsql-instances', 'fishku-project-093:asia-southeast1:fishku-db' ,'--update-secrets', 'SOCKETPATH=hostname:latest' ,'--update-env-vars', 'INSTANCE_CONNECTION_NAME=conn-name', '--update-secrets', 'PAYMENT=payment_key:1', '--ingress', 'internal-and-cloud-load-balancing']
+images:
+- asia-southeast2-docker.pkg.dev/$PROJECT_ID/fishku-dev/nodejs-dev:1
+
+
+    
