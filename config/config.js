@@ -9,10 +9,10 @@ const db = mysql2.createConnection({
     // multipleStatements: true,
 
     // dev
-    host: "35.240.236.134",
+    host: "34.101.201.55",
     user: "root",
-    password: "fishkudb",
-    database: "fishku",
+    password: "octofishdb",
+    database: "octofish-db",
     multipleStatements: true,
 
 });
