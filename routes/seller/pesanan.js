@@ -8,8 +8,8 @@ const { ErrorResponse, GetOutput, PutOutput } = require("../../utils/output");
 router.get("/pesanan/:idSeller", async(req, res) => {
     try {
         const id_seller = req.params.idSeller;
-
-        const query = `select o.id as id_order, o.date,o.notes, o.status, sum(do.weight*f.price) as total_price, f.photo_url from ordering o right join detail_ordering do on o.id = do.id_ordering inner join fish f on do.id_fish = f.id where f.id_seller = "${id_seller}" group by o.id, f.id;`;
+        
+        const query = `select o.id as id_order, o.date, o.status, sum(do.weight*f.price) as total_price, f.photo_url from ordering o right join detail_ordering do on o.id = do.id_ordering inner join fish f on do.id_fish = f.id where f.id_seller = "${id_seller}" group by o.id, f.id;`;
         await GetOutput(query, res);
     } catch (err) {
         return ErrorResponse(err, res);

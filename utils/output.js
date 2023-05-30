@@ -17,9 +17,16 @@ GetOutput = (query, res) => {
         if (err) {
             ErrorResponse(err, res);
         } else {
+            let total = 0
+            for(let i = 0; i < result.length; i++){
+                total += parseInt(result[i].total_price)
+            }
             return res.status(200).json({
                 banyak: result.length,
-                data: result,
+                data: {
+                    "result" : result,
+                    "total" : total
+                },
             });
         }
     });
