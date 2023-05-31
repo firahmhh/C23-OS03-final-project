@@ -9,7 +9,7 @@ const { PutOutput, ErrorResponse, GetOutput } = require("../../utils/output");
 router.get("/profile/:idSeller", async(req, res) => {
     try {
         const id_seller = req.params.idSeller
-        const query = `SELECT name, phone_number, location, roles,photo_url 
+        const query = `SELECT name, store_name, phone_number, location, roles,photo_url 
         FROM seller
         WHERE id = ${id_seller};`
 
@@ -23,10 +23,11 @@ router.get("/profile/:idSeller", async(req, res) => {
 router.put("/profile/edit/:idSeller", async(req, res) => {
     try {
         const id_seller = req.params.idSeller;
-        const { name, phone_number, location, roles, photo_url, nama_pemilik_rekening, nomor_rekening, nama_bank } = req.body;
+        const { name, store_name, phone_number, location, roles, photo_url, nama_pemilik_rekening, nomor_rekening, nama_bank } = req.body;
 
         const schema = {
             name: { type: "string", nullable: false },
+            store_name: { type: "string", nullable: false },
             phone_number: { type: "string", nullable: false, numeric: true },
             location: { type: "string", nullable: false },
             roles: { type: "string", nullable: false },
@@ -44,7 +45,7 @@ router.put("/profile/edit/:idSeller", async(req, res) => {
             });
         };
 
-        const query = `UPDATE seller SET name = '${name}', phone_number = '${phone_number}', location = '${location}', roles = '${roles}', photo_url = '${photo_url}', nama_pemilik_rekening = '${nama_pemilik_rekening}', nomor_rekening = '${nomor_rekening}', nama_bank = '${nama_bank}' 
+        const query = `UPDATE seller SET name = '${name}', store_name = '${store_name}', phone_number = '${phone_number}', location = '${location}', roles = '${roles}', photo_url = '${photo_url}', nama_pemilik_rekening = '${nama_pemilik_rekening}', nomor_rekening = '${nomor_rekening}', nama_bank = '${nama_bank}' 
         WHERE id = '${id_seller}'; `
 
         db.query(query, (err, result) => {
