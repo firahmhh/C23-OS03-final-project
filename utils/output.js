@@ -24,8 +24,8 @@ GetOutput = (query, res) => {
             return res.status(200).json({
                 banyak: result.length,
                 data: {
-                    "result" : result,
-                    "total" : total
+                    "total" : total,
+                    "result" : result
                 },
             });
         }
