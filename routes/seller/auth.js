@@ -15,7 +15,7 @@ router.post("/regist", async (req, res) => {
       name: { type: "string", nullable: false },
       email: { type: "email", nullable: false },
       password: { type: "string", min: 6, nullable: false },
-      phone_number: { type: "string", nullable: false, numeric: true },
+      phone_number: { type: "string", nullable: false},
       location: { type: "string", nullable: false },
       roles: { type: "string", nullable: false },
     };

@@ -28,7 +28,7 @@ router.put("/profile/edit/:idSeller", async(req, res) => {
         const schema = {
             name: { type: "string", nullable: false },
             store_name: { type: "string", nullable: false },
-            phone_number: { type: "string", nullable: false, numeric: true },
+            phone_number: { type: "string", nullable: false},
             location: { type: "string", nullable: false },
             roles: { type: "string", nullable: false },
             photo_url: { type: "string", nullable: true },
