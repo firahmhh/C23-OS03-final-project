@@ -59,7 +59,7 @@ Endpoint:
   - name = string
   - email = string
   - password = string , min 6
-  - phone_number = int
+  - phone_number = string
   - location = string
   - roles = string
 - Response
@@ -129,7 +129,7 @@ Endpoint:
   - id_seller = int
 - Request Body
   - name = string
-  - phone_number = int
+  - phone_number = string
   - location = string
   - roles = string
   - photo_url = string
