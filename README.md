@@ -1,7 +1,7 @@
 Base URL:
 
  <p >
-  <a href="https://freshness-gill-prediction-api-mps7ogpvxa-et.a.run.app/">freshness-gill-prediction-api</a>
+  <a href="https://freshness-gill-prediction-api-mps7ogpvxa-et.a.run.app/">freshness-gill-prediction-ml-api</a>
 </p>
 
 ### Prediksi Ikan
