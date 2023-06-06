@@ -124,7 +124,7 @@ Endpoint:
 - Endpoint
   - /seller/profile/edit/:idSeller
 - Method
-  - POST
+  - PUT
 - Request Params
   - id_seller = int
 - Request Body
@@ -132,7 +132,7 @@ Endpoint:
   - phone_number = string
   - location = string
   - roles = string
-  - photo_url = string
+  - photo = file
   - nama_pemilik_rekening = string
   - nomor_rekening = string
   - nama_bank = string
