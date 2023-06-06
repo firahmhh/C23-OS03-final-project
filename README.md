@@ -139,7 +139,7 @@ Endpoint:
 - Response
 ```json
 {
-    "message": "Edit Success"
+    "message": "Profile updated"
 }
 ```
 
