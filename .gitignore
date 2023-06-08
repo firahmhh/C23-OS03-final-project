@@ -1,3 +1,8 @@
+#lain-lain
+.vscode/
+routes/
+routes/payment/
+
 # Logs
 logs
 *.log
@@ -126,7 +131,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-#tambahan lainnya
-.vscode/
-serviceaccountkey.json
 

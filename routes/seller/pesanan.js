@@ -20,7 +20,7 @@ router.get("/pesanan/detail/:idOrder", async(req, res) => {
     try {
         const id_order = req.params.idOrder;
 
-        const query = `select c.name as consumer_name, c.phone_number as consumer_phone_number, o.date, c.address, o.notes as note_order, f.name as fish_name, do.notes as fish_note, do.weight,f.price as fish_price, do.weight*f.price as price, f.photo_url from ordering o inner join detail_ordering do on o.id = do.id_ordering inner join fish f on do.id_fish = f.id inner join consumer c on do.id_consumer = c.id where o.id = "${id_order}"`;
+        const query = `select c.name as consumer_name, c.phone_number as consumer_phone_number, o.date, c.address, f.name as fish_name, do.notes as fish_note, do.weight,f.price as fish_price, do.weight*f.price as price, f.photo_url from ordering o inner join detail_ordering do on o.id = do.id_ordering inner join fish f on do.id_fish = f.id inner join consumer c on do.id_consumer = c.id where o.id = "${id_order}"`;
         await GetOutput(query, res);
     } catch (err) {
         return ErrorResponse(err, res);

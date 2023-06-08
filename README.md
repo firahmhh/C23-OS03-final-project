@@ -263,57 +263,68 @@ Endpoint:
 
 ```json
 {
-    "banyak": 6,
-    "data": [
-        {
-            "id_order": 1,
-            "date": "2008-11-11T05:23:44.000Z",
-            "notes": null,
-            "status": "sending",
-            "total_price": "50000",
-            "photo_url": null
-        },
-        {
-            "id_order": 2,
-            "date": "2123-11-11T05:23:00.000Z",
-            "notes": "01osjd081rj81dhnd01",
-            "status": "waiting",
-            "total_price": "50000",
-            "photo_url": null
-        },
-        {
-            "id_order": 1,
-            "date": "2008-11-11T05:23:44.000Z",
-            "notes": null,
-            "status": "sending",
-            "total_price": "100000",
-            "photo_url": null
-        },
-        {
-            "id_order": 2,
-            "date": "2123-11-11T05:23:00.000Z",
-            "notes": "01osjd081rj81dhnd01",
-            "status": "waiting",
-            "total_price": "100000",
-            "photo_url": null
-        },
-        {
-            "id_order": 3,
-            "date": "2008-11-10T21:23:44.000Z",
-            "notes": "",
-            "status": "waiting",
-            "total_price": "20000",
-            "photo_url": null
-        },
-        {
-            "id_order": 4,
-            "date": "2008-11-10T21:23:44.000Z",
-            "notes": "",
-            "status": "waiting",
-            "total_price": "20000",
-            "photo_url": null
-        }
-    ]
+    "data": {
+        "total": 8459000,
+        "banyak": 8,
+        "result": [
+            {
+                "id_order": null,
+                "date": null,
+                "status": null,
+                "total_price": "245000",
+                "photo_url": null
+            },
+            {
+                "id_order": null,
+                "date": null,
+                "status": null,
+                "total_price": "7260000",
+                "photo_url": null
+            },
+            {
+                "id_order": null,
+                "date": null,
+                "status": null,
+                "total_price": "84000",
+                "photo_url": null
+            },
+            {
+                "id_order": 1,
+                "date": "2022-11-11T05:23:44.000Z",
+                "status": "sending",
+                "total_price": "200000",
+                "photo_url": null
+            },
+            {
+                "id_order": 1,
+                "date": "2022-11-11T05:23:44.000Z",
+                "status": "sending",
+                "total_price": "300000",
+                "photo_url": null
+            },
+            {
+                "id_order": 2,
+                "date": "2022-11-11T05:23:44.000Z",
+                "status": "sending",
+                "total_price": "50000",
+                "photo_url": null
+            },
+            {
+                "id_order": 2,
+                "date": "2022-11-11T05:23:44.000Z",
+                "status": "sending",
+                "total_price": "300000",
+                "photo_url": null
+            },
+            {
+                "id_order": 3,
+                "date": "2023-06-06T12:34:56.000Z",
+                "status": "test",
+                "total_price": "20000",
+                "photo_url": null
+            }
+        ]
+    }
 }
 ```
 
@@ -329,52 +340,58 @@ Endpoint:
 
 ```json
 {
-    "banyak": 2,
-    "data": [
-        {
-            "consumer_name": "tsubasa",
-            "consumer_phone_number": "011137485912",
-            "date": "2008-11-11T05:23:44.000Z",
-            "address": "jepang",
-            "note_order": null,
-            "fish_name": "arwana",
-            "fish_note": "-",
-            "weight": 10,
-            "fish_price": 5000,
-            "price": 50000,
-            "photo_url": null
-        },
-        {
-            "consumer_name": "tsubasa",
-            "consumer_phone_number": "011137485912",
-            "date": "2008-11-11T05:23:44.000Z",
-            "address": "jepang",
-            "note_order": null,
-            "fish_name": "megalodon",
-            "fish_note": "-",
-            "weight": 10,
-            "fish_price": 10000,
-            "price": 100000,
-            "photo_url": null
-        }
-    ]
-}
-```
-
-### Sending order seller
-
-- Endpoint
-  - /seller/pesanan/edit/:idOrder
-- Method
-  - PUT
-- Request Params
-  - idOrder = string
-- Request Body
-  - status = string
-- Response
-
-```json
-{
-  "message": "Edit Success"
+    "data": {
+        "banyak": 4,
+        "result": [
+            {
+                "consumer_name": "narutoo",
+                "consumer_phone_number": "08964544",
+                "date": "2022-11-11T05:23:44.000Z",
+                "address": "jkt",
+                "fish_name": "arwana",
+                "fish_note": "-",
+                "weight": 10,
+                "fish_price": 5000,
+                "price": 50000,
+                "photo_url": null
+            },
+            {
+                "consumer_name": "narutoo",
+                "consumer_phone_number": "08964544",
+                "date": "2022-11-11T05:23:44.000Z",
+                "address": "jkt",
+                "fish_name": "kakap",
+                "fish_note": "-",
+                "weight": 10,
+                "fish_price": 30000,
+                "price": 300000,
+                "photo_url": null
+            },
+            {
+                "consumer_name": "wohin",
+                "consumer_phone_number": "018392648263",
+                "date": "2022-11-11T05:23:44.000Z",
+                "address": "korea",
+                "fish_name": "arwana",
+                "fish_note": "ggg",
+                "weight": 30,
+                "fish_price": 5000,
+                "price": 150000,
+                "photo_url": null
+            },
+            {
+                "consumer_name": "admin",
+                "consumer_phone_number": "081234567890",
+                "date": "2022-11-11T05:23:44.000Z",
+                "address": "semarang",
+                "fish_name": "megalodon",
+                "fish_note": "yang besar ikannya",
+                "weight": 12,
+                "fish_price": 9000,
+                "price": 108000,
+                "photo_url": null
+            }
+        ]
+    }
 }
 ```
