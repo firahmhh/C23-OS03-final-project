@@ -12,7 +12,7 @@
     "cors": "^2.8.5",
     "dateformat": "^5.0.3",
     "debug": "~2.6.9",
-    "dotenv": "^16.0.2",
+    "dotenv": "^16.1.4",
     "express": "~4.16.1",
     "express-fileupload": "^1.4.0",
     "fastest-validator": "^1.15.0",
