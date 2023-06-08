@@ -4,12 +4,11 @@ const Validator = require("fastest-validator");
 const v = new Validator();
 const { PutOutput, ErrorResponse, GetOutput } = require("../../utils/output");
 
-// disti
 // show profile
 router.get("/profile/:idSeller", async(req, res) => {
     try {
         const id_seller = req.params.idSeller
-        const query = `SELECT name, store_name, phone_number, location, roles,photo_url 
+        const query = `SELECT name, store_name, phone_number, email, location, roles, photo_url 
         FROM seller
         WHERE id = ${id_seller};`
 
@@ -22,6 +21,7 @@ router.get("/profile/:idSeller", async(req, res) => {
 // edit profile
 router.put("/profile/edit/:idSeller", async(req, res) => {
     try {
+        console.log(req);
         const id_seller = req.params.idSeller;
         const { name, store_name, phone_number, location, roles, photo_url, nama_pemilik_rekening, nomor_rekening, nama_bank } = req.body;
 
@@ -43,26 +43,15 @@ router.put("/profile/edit/:idSeller", async(req, res) => {
                 message: "Validation failed",
                 errors: validationResponse
             });
-        };
+        }
 
         const query = `UPDATE seller SET name = '${name}', store_name = '${store_name}', phone_number = '${phone_number}', location = '${location}', roles = '${roles}', photo_url = '${photo_url}', nama_pemilik_rekening = '${nama_pemilik_rekening}', nomor_rekening = '${nomor_rekening}', nama_bank = '${nama_bank}' 
-        WHERE id = '${id_seller}'; `
+            WHERE id = '${id_seller}';`
 
-        db.query(query, (err, result) => {
-            if (err) {
-                ErrorResponse(err, res);
-            } else {
-                return res.status(200).json({
-                    message: "Edit Success",
-                    data: result
-                });
-            }
-        });
-
-
+        await PutOutput(query, res);
     } catch (err) {
-        return ErrorResponse(err, res)
+        return ErrorResponse(err, res);
     }
-})
+});
 
 module.exports = router
