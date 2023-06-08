@@ -21,12 +21,22 @@ GetOutput = (query, res) => {
             for(let i = 0; i < result.length; i++){
                 total += parseInt(result[i].total_price)
             }
+            let data = {}
+            console.log(total)
+        if(!isNaN(total))
+            data = {
+                "total" : total,
+                "banyak" : result.length,
+                "result" : result
+            }
+        else {
+            data = {
+                "banyak" : result.length,
+                "result" : result
+            }
+        }
             return res.status(200).json({
-                banyak: result.length,
-                data: {
-                    "total" : total,
-                    "result" : result
-                },
+                data: data
             });
         }
     });
