@@ -127,6 +127,6 @@ dist
 .pnp.*
 
 #tambahan lainnya
-.vscode*
+.vscode/
 serviceaccountkey.json
 
