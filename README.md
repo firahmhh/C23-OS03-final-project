@@ -85,13 +85,13 @@ MAE :1.22
 
 #### Tongkol
 - Eceran
-MSE :5.70,
+MSE :5.81,
 MAE :2.02
 
 ![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/bf352288-2535-4521-b99e-37e54963c4c6)
 
 - Grosir
-MSE :0.78, 
-MAE: 0.55
+MSE :0.52,
+MAE: 0.42
 
 ![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/b9909019-64d7-4a50-94f8-64890d86b4cf)
