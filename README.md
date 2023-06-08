@@ -1,4 +1,4 @@
-# Fish Price Prediction
+# Eye Freshness ML API
 
 Base URL:
 
