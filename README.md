@@ -2,10 +2,10 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/15710919-02c12464-72c8-4a52-a955-656d1592b021?action=collection%2Ffork&collection-url=entityId%3D15710919-02c12464-72c8-4a52-a955-656d1592b021%26entityType%3Dcollection%26workspaceId%3D47d7d502-7365-4157-97be-2f07577bb417)
 
-Base URL for **Development**:
+ **Base URL**:
 
  <p >
-  <a href="https://api.fishku.id/">https://octofish.et.r.appspot.com/</a>
+  <a href="https://octofish.et.r.appspot.com/">Octofish Backend API</a>
 </p>
 
 Endpoint:
