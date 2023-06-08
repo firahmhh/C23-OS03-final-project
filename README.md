@@ -1,42 +1,97 @@
 # Machine Learning Notes
+## Step of building price prediction model:
+1. Collect the dataset for Price prediction [from KKP;](https://statistik.kkp.go.id/mobile/asset/book/Buku_KPDA_2022_270522_FINAl_FIX_FP_SP.pdf)
+2. Choosing learning algorithm that maybe suitable: Linear Regression, RNN, LSTM, and ARIMA;
+3. Build model architecture with all learning algorithm options;
+4. Train and Evaluate the model by compare each learning algorithm result;
+5. Improve the model;
+6. Choose the best model;
 
-Progress:
-1. Collect the data related to our features: Price Prediction(from Kementrian Kelautan dan Perikanan Indonesia), Freshness Detection( using Fish Images, Ideal storage temperature, and Ideal storage time)
-2. Exploratory data analysis and choosing best learning algorithm related to the problem,
-3. Create and training model for our features: Price Prediction and Freshness detection(using images of fresh fish and spoiled fish for dataset;ideal storage temperature and time for the other approachment method),
-4. Improving model by changing outlier of the data and try other model infrastucture and so on.
+## Step of building freshness detection model:
+1. Collect the dataset of gills and fish eyes images from Fishku;
+2. Choosing learning algorithm that maybe suitable: CNN and MobileNet;
+3. Build model architecture with all learning algorithm options;
+4. Train and Evaluate the model by compare each learning algorithm result;
+5. Improve the model;
+6. Choose the best model;
+
+## Result:
+### Fish Freshness Detection
+1. Using Gills
+
+    ![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/e69f7f26-d7f9-43f4-a485-a486d3bcdd7e)
+    ![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/7c7c8e74-3225-484c-8151-ad850dcfb8b9)
+    ![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/096290f3-b660-4976-a1f2-cb5a46b5688c)
+
+2. Using Eyes
+    
+    ![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/8159b418-896d-40d8-b7a6-f2d050be2ca4)
+    ![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/a3c9c7d2-457d-4483-9d30-468186e4d58d)
+    ![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/f77478c3-4ce3-4196-9f69-4ab3f8d4f62d)
+
+### Price Prediction
+#### Bandeng
+- Eceran
+MSE :4.68, 
+MAE :1.93
+
+![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/2ed00d44-4d08-416d-9d91-8d96213bab2e)
+
+- Grosir
+MSE :5.93, 
+MAE :1.65
+
+![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/16fa1d81-59a6-4e76-8f3e-c043136db762)
+
+#### Gurame
+- Eceran
+MSE :5.96, 
+MAE :1.76
+
+![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/e9e62fc9-9eb4-4b3c-8a4e-1345688eaef9)
+
+- Grosir
+MSE :5.32,
+MAE :1.81
+
+![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/2b1f7a68-8c36-474c-b97f-be494a4571c3)
 
 
-Additional note : 
-Several dataset that we used are belong to Fishku's Company so we can't attach the data in this repository due to NDA
+#### Lele
+- Eceran
+MSE :3.27, 
+MAE :1.56
 
-Supporting Evidence :
+![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/3fd5c580-aca4-46f9-b265-3fbc8a51f0be)
 
-- Fish freshness prediction by temperature and storage time : 
+- Grosir
+MSE :0.47
+MAE :0.48
 
-![temp_fresh](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/41560084/412570a8-c586-4019-94d2-b3cbcdbb91c3)
+![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/15286a6e-2a88-4882-86ef-792c0898f970)
 
-- Validation and loss for fish freshness (eyes) : 
+#### Nila
+- Eceran
+MSE :5.04, 
+MAE :1.63
 
-![image3](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/41560084/84407a2c-2291-4426-a6fe-9d9b21dcb5a8)
+![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/6ccd7d13-c0c4-4f9d-9f0b-8cde66869494)
 
-- Validation and loss for fish freshness (gills) : 
+- Grosir
+MSE :3.05, 
+MAE :1.22
 
-![image5](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/41560084/5bcae476-9242-47df-98dd-27c763461905)
+![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/67877937-df48-45b0-8432-cca213d7ab35)
 
-- Fish freshness prediction by image (eyes) : 
+#### Tongkol
+- Eceran
+MSE :5.70,
+MAE :2.02
 
-![image4](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/41560084/1bf23062-6383-4c7c-ab29-75091e3b7bbe)
+![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/bf352288-2535-4521-b99e-37e54963c4c6)
 
-- Price forecast for bandeng
+- Grosir
+MSE :0.78, 
+MAE: 0.55
 
-![image6](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/41560084/a3921566-77b7-46f1-936c-f6215856f14b)
-
-- Price forecast for tongkol
-
-![image7](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/41560084/3a29515d-b7a4-4ef3-8b30-1652f49918cb)
-
-- Price forecast for kembung
-
-![image8](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/41560084/7b643b0f-dbab-4827-a83e-aaa08bdf4977)
-
+![image](https://github.com/firahmhh/OCTOFISH-CHECKPOINT/assets/125654103/b9909019-64d7-4a50-94f8-64890d86b4cf)
